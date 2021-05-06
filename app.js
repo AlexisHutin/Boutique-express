@@ -11,7 +11,6 @@ const UsersRoutes = require("./route/UsersRoutes");
 const App = Express();
 App.use(Express.json());
 
-
 // let car var c'est pas bien
 let corsOptions = {
   origin: "http://localhost:8080",

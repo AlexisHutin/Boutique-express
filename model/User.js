@@ -9,16 +9,26 @@ const UserModel = function (user) {
   this.phone = user.phone;
 };
 
-UserModel.create = (user,result) => {
-    SQL.query(
-        "INSERT INTO users (username, email, password, adress, phone) VALUES ('" + user.username + "','" + user.email + "','" + user.password + "','" + user.adress + "','" + user.phone + "')",
-        (err, res) => {
-            if (err) {
-              result(null, err);
-            }
-            result(null, res);
-          }
-        );
+UserModel.create = (user, result) => {
+  SQL.query(
+    "INSERT INTO users (username, email, password, adress, phone) VALUES ('" +
+      user.username +
+      "','" +
+      user.email +
+      "','" +
+      user.password +
+      "','" +
+      user.adress +
+      "','" +
+      user.phone +
+      "')",
+    (err, res) => {
+      if (err) {
+        result(null, err);
+      }
+      result(null, res);
+    }
+  );
 };
 
 module.exports = UserModel;
