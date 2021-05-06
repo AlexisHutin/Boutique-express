@@ -644,7 +644,38 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `username` varchar(255) NOT NULL,
+    `email` varchar(255) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    `adress` varchar(255) NOT NULL,
+    `phone` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
--- 2021-05-06 11:51:07
+INSERT INTO
+    `users` (
+        `id`,
+        `username`,
+        `email`,
+        `password`,
+        `adress`,
+        `phone`
+    )
+VALUES
+    (
+        1,
+        'Michel',
+        'email@email.fr',
+        '1234567890',
+        'oui',
+        '0102030405'
+    ),
+    (
+        2,
+        'Michel',
+        'email@email.fr',
+        '1234567890',
+        'oui',
+        '0102030405'
+    );
+
+-- 2021-05-06 13:23:15

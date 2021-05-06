@@ -6,8 +6,11 @@ const Cors = require("cors");
 const CategoriesRoutes = require("./route/CategoriesRoutes");
 const SubCategoriesRoutes = require("./route/SubCategoriesRoutes");
 const ProductsRoutes = require("./route/ProductsRoutes");
+const UsersRoutes = require("./route/UsersRoutes");
 
 const App = Express();
+App.use(Express.json());
+
 
 // let car var c'est pas bien
 let corsOptions = {
@@ -19,5 +22,6 @@ App.use(Cors(corsOptions));
 App.use("/categories", CategoriesRoutes);
 App.use("/sub-categories", SubCategoriesRoutes);
 App.use("/products", ProductsRoutes);
+App.use("/users", UsersRoutes);
 
 module.exports = App;
