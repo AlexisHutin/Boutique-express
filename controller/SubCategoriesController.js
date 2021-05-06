@@ -12,9 +12,9 @@ exports.getByCategoryId = (req, res, next) => {
         message: err.message || "error",
       });
     } else {
-        res.status(200).json({
-          data: data,
-        });
+      res.status(200).json({
+        data: data,
+      });
     }
   });
 };
